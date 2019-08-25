@@ -2,32 +2,32 @@
   <h1>
     GeoLocation Information
   </h1>
- 
 
-<table datatable class="table table-hover row-border hover" >
-  <thead class="thead-dark">
-    <tr>
-      <th>RegNo.</th>
-      <th>Speed</th>
-      <th>GeoLocation</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Distance</th>
-      <th>Elevation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of geoGraphicData" >
-        <td>{{item.regNo}}</td>
-        <td [ngStyle]="{'color':colorGreen(item.speed)}">{{item.speed}}</td>
-        <td>{{item.locStr}}</td>
-        <td>{{item.lattitude}}</td>
-        <td>{{item.longitude}}</td>
-        <td>{{item.distance}}</td>
-        <td>{{item.elevation}}</td>
-  </tr>
-</tbody>
-</table>
- 
+  <div class="table-responsive-md">
+    <table datatable class="table table-hover  table-fixed row-border hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>RegNo.</th>
+          <th>Speed</th>
+          <th>GeoLocation</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Distance</th>
+          <th>Elevation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of geoGraphicData">
+          <td>{{item.regNo}}</td>
+          <td [ngStyle]="{'color':colorGreen(item.speed)}">{{item.speed}}</td>
+          <td>{{item.locStr}}</td>
+          <td>{{item.lattitude}}</td>
+          <td>{{item.longitude}}</td>
+          <td>{{item.distance}}</td>
+          <td>{{item.elevation}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <router-outlet></router-outlet>
